@@ -86,17 +86,6 @@ export default function HomePage() {
       </section>
 
       {/* WhatsApp Chat Button (placeholder) */}
-      <a
-        href="https://wa.me/231881582130"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition"
-        title="Chat with us on WhatsApp"
-      >
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M...Z" /> {/* You can use a WhatsApp icon SVG here */}
-        </svg>
-      </a>
     </main>
   );
 }

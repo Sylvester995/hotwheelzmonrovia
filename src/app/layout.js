@@ -85,7 +85,21 @@ export default function RootLayout({ children }) {
     </a>
   </div>
 </footer>
-
+<a
+  href="https://wa.me/231881582130"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-8 right-8 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition"
+  title="Chat with us on WhatsApp"
+>
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <circle cx="16" cy="16" r="16" fill="#25D366" />
+    <path
+      fill="#fff"
+      d="M21.17 18.59c-.29-.15-1.72-.85-1.98-.95-.27-.1-.46-.15-.65.15-.2.29-.75.95-.91 1.14-.16.2-.33.21-.62.07-.29-.15-1.23-.45-2.35-1.44-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.44.13-.58.13-.13.29-.34.44-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.03-.51-.08-.15-.65-1.57-.89-2.17-.23-.57-.47-.5-.65-.51h-.56c-.19 0-.5.07-.76.34-.26.26-1.01.98-1.01 2.4s1.03 2.78 1.17 2.98c.14.2 2.03 3.1 4.95 4.23.69.27 1.23.44 1.65.56.69.22 1.32.19 1.82.12.56-.08 1.72-.7 1.96-1.38.24-.67.24-1.24.17-1.37-.07-.14-.26-.21-.54-.36z"
+    />
+  </svg>
+</a>
         
       </body>
     </html>

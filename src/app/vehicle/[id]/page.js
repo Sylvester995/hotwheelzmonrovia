@@ -1,16 +1,11 @@
 "use client";
-import Image from "next/image";
+import { useState } from "react";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-
-// ...rest of your code
-
-
-
 
 export default function VehicleDetailPage() {
-    const router = useRouter();
-
+    const params = useParams();
+    const vehicleId = params.id; // Assuming the URL is like /vehicle/[id]
   return (
     <main className="max-w-3xl mx-auto p-8">
       {/* Images Gallery */}
@@ -18,7 +13,6 @@ export default function VehicleDetailPage() {
         <div className="flex gap-4">
           <div className="w-2/3">
             <div className="h-56 bg-gray-200 flex items-center justify-center rounded">
-              {/* Main vehicle image here */}
               <span className="text-gray-400">[Main Image]</span>
             </div>
           </div>
@@ -38,7 +32,7 @@ export default function VehicleDetailPage() {
           <div><span className="font-semibold">Brand:</span> Toyota</div>
           <div><span className="font-semibold">Model Year:</span> 2016</div>
           <div><span className="font-semibold">Miles:</span> 56,000</div>
-            <div><span className="font-semibold">Condition:</span> Used</div>
+          <div><span className="font-semibold">Condition:</span> Used</div>
           <div><span className="font-semibold">Transmission:</span> Automatic</div>
           <div><span className="font-semibold">Body Type:</span> Sedan</div>
           <div><span className="font-semibold">Fuel:</span> Petrol</div>
@@ -48,15 +42,15 @@ export default function VehicleDetailPage() {
           Well-maintained, low-mileage sedan. Great for city and long-distance rides.
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition">
-            Request Test Drive
-          </button>
+          <Link href={`/vehicle/${vehicleId}/test-drive`}>
+             <button className="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition">Request Test Drive</button>
+          </Link>
           <button className="bg-green-600 text-white px-5 py-2 rounded-xl hover:bg-green-700 transition">
             Reserve Now
           </button>
-          <button className="bg-gray-200 text-gray-800 px-5 py-2 rounded-xl hover:bg-gray-300 transition">
-            Financing Options
-          </button>
+          <Link href={`/vehicle/${vehicleId}/financing`}>
+            <button className="bg-gray-200 text-gray-950 px-5 py-2 rounded-xl hover:bg-gray-400 transition">Financing Options</button>
+          </Link>
         </div>
         <a
           href="https://wa.me/231881582130"
@@ -67,6 +61,8 @@ export default function VehicleDetailPage() {
           Chat with MARKAY BOY on WhatsApp
         </a>
       </section>
+
+
       {/* BACK BUTTON */}
       <button
         onClick={() => router.back()}
